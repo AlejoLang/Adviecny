@@ -1,25 +1,28 @@
 import GiftItem from "components/GiftItem"
 import { giftsContext } from "context/giftsContext"
 import { useContext } from "react"
+import './styles.css'
 
 function GiftsList() {
 
-  const {giftsList, updateGiftsList} = useContext(giftsContext)
+  const {giftsList} = useContext(giftsContext)
 
-  const clearList = () => {
-    updateGiftsList([])
+  if(giftsList.length === 0){
+    return (
+      <p className="noGiftsP">Aun no hay regalos</p>
+    )
   }
 
   return (
-    <div className="giftsList">
-        <ul>
+    <div className="giftsListDiv">
+        <ul className="giftsList">
           {
             giftsList.map(gift => 
               <GiftItem itemData={gift} />
             )
           }
         </ul>
-        <button className="clearListBtn" onClick={clearList}>Borrar todo</button>
+        
     </div>
   )
 }

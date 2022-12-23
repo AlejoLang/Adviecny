@@ -1,0 +1,16 @@
+.giftsListDiv
+{
+    height: 100%;
+    overflow-y: auto;
+}
+
+.giftsList
+{
+    list-style: none;
+    padding: 0;
+}
+
+.noGiftsP
+{
+    text-align: center;
+}
