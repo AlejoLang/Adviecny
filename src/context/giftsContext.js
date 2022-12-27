@@ -4,7 +4,7 @@ export const giftsContext = createContext()
 
 export function GiftsContextProvider (props) {
 
-    const [giftsList, updateGiftsList] = useState([]);
+    const [giftsList, updateGiftsList] = useState(JSON.parse(localStorage.getItem('giftsList')) ?? []);
 
     const [totalPrice, updateTotalPrice] = useState(0);
 
@@ -12,6 +12,7 @@ export function GiftsContextProvider (props) {
         updateTotalPrice(
             giftsList.reduce((a, b) => a + (b.precio * b.cant), 0)
         )
+        localStorage.setItem('giftsList', JSON.stringify(giftsList))
     }, [giftsList])
 
     return (
