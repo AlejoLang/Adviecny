@@ -19,6 +19,24 @@ function GiftForm() {
             id: Math.random()
         }
 
+        const classes = document.querySelector('.formModal').classList
+        
+        if(classes[1] === 'editMode'){
+            updateGiftsList(
+                giftsList.map(gift => {
+                    if(gift.id == classes[2]){
+                        gift = newGift
+                    }
+                    console.log(gift)
+                    return gift
+                })
+            )
+            document.querySelector('.formModal').classList.remove(classes[1], classes[2])
+            document.querySelector('dialog').open = false
+            e.target.reset()
+            return;
+        }
+
         updateGiftsList([...giftsList, newGift])
 
         document.querySelector('dialog').open = false
@@ -28,6 +46,7 @@ function GiftForm() {
     const handleFormClose = (e) => {
         e.preventDefault()
         document.querySelector('dialog').open = false
+        document.querySelector('.formModal').classList = 'formModal'
         document.querySelector('form').reset()
     }
 
