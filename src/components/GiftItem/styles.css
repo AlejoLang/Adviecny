@@ -22,7 +22,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 40%;
+    max-width: 50%;
 }
 
 .giftName,
@@ -39,6 +39,7 @@
 {
     font-weight: 700;
     width: fit-content;
+    max-width: 80%;
 }
 
 .giftCant
