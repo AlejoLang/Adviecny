@@ -38,7 +38,7 @@
 .giftName
 {
     font-weight: 700;
-    width: 80%;
+    width: fit-content;
 }
 
 .giftCant
