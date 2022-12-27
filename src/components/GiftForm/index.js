@@ -71,7 +71,7 @@ function GiftForm() {
   return (
     <dialog className='formModal'>
         <form onSubmit={handleFormSubmit} className='addGiftForm'>
-            <input type="text" placeholder='Regalo' required className='formInput giftNameInput'/>
+            <input type="text" placeholder='Regalo' maxLength={30} required className='formInput giftNameInput'/>
             <button className="getRandomItemBtn" onClick={getRandomItem}>Sorprendeme</button>
             <input type="number" placeholder='Precio' required className='formInput giftPriceInput'/>
             <input type="number" placeholder='Cantidad' required className='formInput giftAmmInput'/>

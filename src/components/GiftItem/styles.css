@@ -22,7 +22,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    max-width: 50%;
+    width: 50%;
+    overflow: hidden;
 }
 
 .giftName,
@@ -39,7 +40,8 @@
 {
     font-weight: 700;
     width: fit-content;
-    max-width: 80%;
+    max-width: 75%;
+    font-size: 14px;
 }
 
 .giftCant
@@ -47,23 +49,27 @@
     width: 10%;
     margin: 0 0 0 0.5rem;
     font-weight: 700;
+    font-size: 14px;
 }
 
 .giftDest
 {
-    font-size: 14px;
+    font-size: 12px;
+    text-align: left;
 }
 
 .giftPrice
 {
     margin: 0 0.75rem 0 auto;
     min-width: fit-content;
+    flex: 1 0 20%;
 }
 
 .giftButtons
 {
     display: flex;
     gap: 5px;
+    flex: 1 0 auto;
 }
 
 .giftButtons > *

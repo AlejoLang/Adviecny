@@ -34,7 +34,7 @@ function GiftItem({itemData, listedMode}) {
       }
       <div className="giftMainInfo">
         <p className="giftName">{itemData?.nombre}</p> 
-        <p className='giftCant'>({itemData?.cant})</p>
+        {itemData?.cant > 1 ? <p className='giftCant'>({itemData?.cant})</p> : ''}
         <p className="giftDest">{itemData?.dest}</p>
       </div>
       <p className="giftPrice">
