@@ -31,9 +31,19 @@
     width: 60%;
 }
 
-.giftPriceInput
+.getRandomItemBtn
 {
     width: 30%;
+}
+
+.giftPriceInput
+{
+    width: 45%;
+}
+
+.giftAmmInput
+{
+    width: 45%;
 }
 
 .formInput:has(:required)::placeholder
