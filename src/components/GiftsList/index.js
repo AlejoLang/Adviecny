@@ -10,7 +10,7 @@ function GiftsList() {
   if(giftsList.length === 0){
     return (
       <p className="noGiftsP">Aun no hay regalos</p>
-    )
+      ) 
   }
 
   return (
@@ -18,7 +18,7 @@ function GiftsList() {
         <ul className="giftsList">
           {
             giftsList.map(gift => 
-              <GiftItem itemData={gift} />
+              <GiftItem itemData={gift} key={gift.id}/>
             )
           }
         </ul>
