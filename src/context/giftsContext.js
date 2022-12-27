@@ -4,7 +4,7 @@ export const giftsContext = createContext()
 
 export function GiftsContextProvider (props) {
 
-    const [giftsList, updateGiftsList] = useState(['asdasd', 'asdasdsa', 'asda']);
+    const [giftsList, updateGiftsList] = useState([]);
 
     return (
         <giftsContext.Provider value={{giftsList, updateGiftsList}}>
