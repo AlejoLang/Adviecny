@@ -5,10 +5,8 @@ import './styles.css'
 function GiftForm() {
 
     const {giftsList, updateGiftsList} = useContext(giftsContext)
-    let cont = 0;
 
     const handleFormSubmit = (e) => {
-        cont++
         e.preventDefault()
 
         const newGift = {
@@ -17,7 +15,7 @@ function GiftForm() {
             dest: e.target[2].value ?? '',
             img: e.target[3].value ?? '',
             cant: e.target[4].value,
-            id: cont
+            id: Math.random()
         }
 
         updateGiftsList([...giftsList, newGift])
