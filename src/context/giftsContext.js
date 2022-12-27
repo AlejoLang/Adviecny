@@ -4,7 +4,7 @@ export const giftsContext = createContext()
 
 export function GiftsContextProvider (props) {
 
-    const [giftsList, updateGiftsList] = useState(JSON.parse(localStorage.getItem('giftsList')) ?? []);
+    const [giftsList, updateGiftsList] = useState(JSON.parse(localStorage.getItem('giftsList')) || []);
 
     /*
     const [giftsList, updateGiftsList] = useState('loading')
