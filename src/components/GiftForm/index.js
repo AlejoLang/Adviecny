@@ -27,7 +27,6 @@ function GiftForm() {
                     if(gift.id == classes[2]){
                         gift = newGift
                     }
-                    console.log(gift)
                     return gift
                 })
             )

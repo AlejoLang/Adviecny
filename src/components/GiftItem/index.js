@@ -12,10 +12,12 @@ function GiftItem({itemData}) {
     )
   }
 
-  const handleItemEdit = () => {
-    const modal = document.querySelector('.formModal')
+  const handleItemEdit = (e) => {
     const form = document.querySelector('.addGiftForm')
-    modal.classList.add('editMode', itemData.id.toString())
+    const modal = document.querySelector('.formModal')
+    if(e.target.value !== 'dup'){
+      modal.classList.add('editMode', itemData.id.toString())
+    }
     modal.open = true;
     form[0].value = itemData.nombre
     form[2].value = itemData.precio
@@ -38,7 +40,8 @@ function GiftItem({itemData}) {
         $ {itemData.precio * itemData.cant}
       </p>
       <div className="giftButtons">
-        <button className="editGiftBtn" onClick={handleItemEdit}>E</button>
+      <button className="editGiftBtn" value='dup' onClick={handleItemEdit}>D</button>
+        <button className="editGiftBtn" value='edit' onClick={handleItemEdit}>E</button>
         <button className="deleteGiftBtn" onClick={handleItemDelete}>X</button>
       </div>
     </li>
