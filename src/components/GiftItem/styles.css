@@ -29,15 +29,16 @@
 .giftDest
 {
     margin: 0;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .giftName
 {
     font-weight: 700;
-    width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    
 }
 
 .giftDest
