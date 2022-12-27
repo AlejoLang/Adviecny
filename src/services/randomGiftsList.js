@@ -31,7 +31,8 @@ export const randomGiftsList = [
     },
     {
         nombre: 'Linterna Spica x40',
-        precio: 10000,
-        cant: 1
+        precio: 16000,
+        cant: 1,
+        img: 'https://http2.mlstatic.com/D_NQ_NP_653621-MLA47034178602_082021-V.webp'
     },
 ]
