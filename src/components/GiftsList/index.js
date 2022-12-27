@@ -12,13 +12,14 @@ function GiftsList() {
       <p className="noGiftsP">Aun no hay regalos</p>
       ) 
   }
+  console.log(giftsList)
 
   return (
     <div className="giftsListDiv">
         <ul className="giftsList">
           {
             giftsList.map(gift => 
-              <GiftItem itemData={gift} key={gift.id}/>
+              <GiftItem itemData={gift} listedMode={false} key={gift.id}/>
             )
           }
         </ul>

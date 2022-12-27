@@ -36,7 +36,8 @@
     border-radius: 5px;
 }
 
-.clearListBtn
+.clearListBtn,
+.openCleanListBtn
 {
     line-height: 2em;
     font-size: 14px;

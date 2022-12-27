@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { giftsContext } from 'context/giftsContext';
 import './App.css';
 import GiftForm from 'components/GiftForm';
+import GiftsCleanList from 'components/GiftsCleanList';
 
 function App() {
 
@@ -16,6 +17,10 @@ function App() {
   const clearList = (e) => {
     e.preventDefault()
     updateGiftsList([])
+  }
+
+  const openCleanList = () => {
+    document.querySelector('.giftsCleanList').style.display = 'flex';
   }
 
   if(giftsList === 'loading')
@@ -35,9 +40,11 @@ function App() {
           <p>Total a pagar</p>
           $ {totalPrice}
         </div>
+        <button className="openCleanListBtn" onClick={openCleanList}>Mostrar resumen</button>
         <button className="clearListBtn" onClick={clearList}>Borrar todo</button>
       </div>
       <GiftForm />
+      <GiftsCleanList />
     </div>
   );
 }

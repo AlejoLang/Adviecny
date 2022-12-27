@@ -2,7 +2,8 @@ import { useContext } from 'react'
 import { giftsContext } from 'context/giftsContext'
 import './styles.css'
 
-function GiftItem({itemData}) {
+function GiftItem({itemData, listedMode}) {
+
   
   const {giftsList, updateGiftsList} = useContext(giftsContext)
 
@@ -29,18 +30,18 @@ function GiftItem({itemData}) {
   return (
     <li className="giftItem">
       {
-        itemData.img ? <img src={itemData.img} alt={itemData.nombre} className='giftImg'/> : ''
+        itemData?.img ? <img src={itemData.img} alt={itemData.nombre} className='giftImg'/> : ''
       }
       <div className="giftMainInfo">
-        <p className="giftName">{itemData.nombre}</p> 
-        <p className='giftCant'>({itemData.cant})</p>
-        <p className="giftDest">{itemData.dest}</p>
+        <p className="giftName">{itemData?.nombre}</p> 
+        <p className='giftCant'>({itemData?.cant})</p>
+        <p className="giftDest">{itemData?.dest}</p>
       </div>
       <p className="giftPrice">
-        $ {itemData.precio * itemData.cant}
+        $ {itemData?.precio * itemData?.cant}
       </p>
-      <div className="giftButtons">
-      <button className="editGiftBtn" value='dup' onClick={handleItemEdit}>D</button>
+      <div className="giftButtons" style={listedMode ? {display: 'none'} : {}}>
+        <button className="editGiftBtn" value='dup' onClick={handleItemEdit}>D</button>
         <button className="editGiftBtn" value='edit' onClick={handleItemEdit}>E</button>
         <button className="deleteGiftBtn" onClick={handleItemDelete}>X</button>
       </div>

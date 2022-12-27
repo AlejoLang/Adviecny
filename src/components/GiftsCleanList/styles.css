@@ -1,0 +1,45 @@
+.giftsCleanList
+{
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    text-align: center;
+    width: 30%;
+    background-color: aqua;
+    border-radius: 20px;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.giftsCleanListTitle
+{
+    font-size: 32px;
+}
+
+.giftsCleanListItems
+{
+    padding: 0;
+}
+
+.giftsCleanListButtons
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.giftCleanListCloseBtn
+{
+    line-height: 2em;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 1rem;
+    width: 30%;
+    transition: 0.25s ease all;
+}
+
+.giftCleanListCloseBtn:hover
+{
+    transform: scale(1.1);
+}
