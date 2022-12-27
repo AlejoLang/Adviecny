@@ -6,6 +6,13 @@ export function GiftsContextProvider (props) {
 
     const [giftsList, updateGiftsList] = useState(JSON.parse(localStorage.getItem('giftsList')) ?? []);
 
+    /*
+    const [giftsList, updateGiftsList] = useState('loading')
+    useEffect(() => {
+        api.gifts.list().then(gifts => updateGiftsList(gifts))
+    },[])
+    */ 
+
     const [totalPrice, updateTotalPrice] = useState(0);
 
     useEffect(() => {

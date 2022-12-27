@@ -6,7 +6,7 @@ import GiftForm from 'components/GiftForm';
 
 function App() {
 
-  const {updateGiftsList, totalPrice} = useContext(giftsContext)
+  const {giftsList, updateGiftsList, totalPrice} = useContext(giftsContext)
 
   const openForm = () => {
     const dialog = document.querySelector('dialog')
@@ -16,6 +16,13 @@ function App() {
   const clearList = (e) => {
     e.preventDefault()
     updateGiftsList([])
+  }
+
+  if(giftsList === 'loading')
+  {
+    return (
+      <div>Cargando...</div>
+    )
   }
 
   return (
