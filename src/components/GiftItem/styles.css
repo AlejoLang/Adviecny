@@ -7,7 +7,6 @@
     overflow: hidden;
     display: flex;
     align-items: center;
-    background-color: red;
 }
 
 .giftImg
@@ -76,4 +75,12 @@
 {
     height: 100%;
     aspect-ratio: 1/1;
+    border: none;
+    border-radius: 5px;
+    background: #bebebe;
+}
+
+.giftButtons > *:hover
+{
+    background: #999;
 }
