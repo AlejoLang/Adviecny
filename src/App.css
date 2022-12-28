@@ -7,9 +7,35 @@
     height: 100vh;
 }
 
+header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 1rem;
+    font-size: 24px;
+}
+
 .mainTitle
 {
-    margin-top: 0;
+    margin: 0;
+}
+
+.toggleAudioBtn
+{
+    width: 48px;
+    aspect-ratio: 1/1;
+    border: none;
+    background: none;
+    box-sizing: border-box;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.toggleAudioBtn svg
+{
+    height: 100%;
+    width: 100%;
 }
 
 .giftsDiv
@@ -61,4 +87,36 @@
     margin: 0.5rem 0 0 0;
     font-weight: 400;
     font-size: 16px;
+}
+
+.App
+{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    background: url('/public/media/images/snow1.png'),  url('/public/media/images/snow2.png');
+    -webkit-animation: snow 15s linear infinite;
+    animation: snow 15s linear infinite;
+}
+
+@keyframes snow
+{
+0% {
+    background-position: 0 0, 0 0;
+}
+100% {
+    background-position: 500px 1000px, 500px 500px;
+    }
+}
+
+@-webkit-keyframes snow
+{
+    0% {
+        background-position: 0 0, 0 0;
+    }
+    100% {
+        background-position: 500px 1000px, 500px 500px;
+    }
 }
