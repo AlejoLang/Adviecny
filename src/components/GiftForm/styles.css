@@ -1,14 +1,9 @@
 .formModal
 {
-    width: 30%;
-    min-width: 350px;
-    height: fit-content;
-    max-height: 600px;
-    border: none;
-    border-radius: 20px;
-    box-sizing: border-box;
-    background-color: #444;
-    padding: 1.5rem;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(10px);
+    background: #3939397c;
 }
 
 .addGiftForm
@@ -17,6 +12,30 @@
     flex-wrap: wrap;
     gap: 10px;
     justify-content: space-between;
+    background-color: #f4f4f4;
+    padding: 2rem 1.5rem;
+    width: 30%;
+    min-width: 350px;
+    height: fit-content;
+    max-height: 600px;
+    border: none;
+    border-radius: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.getRandomItemBtn
+{
+    width: 30%;
+    background: #bebebe;
+    border: none;
+    line-height: initial;
+    border-radius: 5px;
+    font-size: 14px;
 }
 
 .formInput
@@ -29,11 +48,6 @@
 .giftNameInput
 {
     width: 60%;
-}
-
-.getRandomItemBtn
-{
-    width: 30%;
 }
 
 .giftPriceInput
@@ -54,7 +68,7 @@
 .closeFormBtn,
 .addGiftBtn
 {
-    line-height: 2em;
+    line-height: 2.5em;
     font-size: 16px;
     border-radius: 5px;
     border: none;
@@ -71,10 +85,22 @@
 
 .closeFormBtn
 {
-    background: #efefef;
+    background: #bebebe;
+}
+
+.closeFormBtn:hover,
+.getRandomItemBtn:hover
+{
+    background: #999;
 }
 
 .addGiftBtn
 {
-    background: red;
+    background: #be1614;
+    color: #f1f1f1;
+}
+
+.addGiftBtn:hover
+{
+    background: #840c0b;
 }

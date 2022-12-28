@@ -23,7 +23,7 @@ function App() {
   }
 
   const openCleanList = () => {
-    document.querySelector('.giftsCleanList').style.display = 'flex';
+    document.querySelector('.cleanListBackdrop').style.display = 'block';
   }
 
   const toggleAudio = (e) => {

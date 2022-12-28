@@ -10,7 +10,7 @@ function GiftsCleanList() {
   const { giftsList } = useContext(giftsContext)
 
   const closeCleanList = () => {
-    document.querySelector('.giftsCleanList').style.display = 'none'
+    document.querySelector('.cleanListBackdrop').style.display = 'none'
   }
 
   const generatePDF = () => {
@@ -26,16 +26,18 @@ function GiftsCleanList() {
   }
 
   return (
-    <div className='giftsCleanList'>
-      <h2 className='giftsCleanListTitle'>Comprar</h2>
-      <ul className='giftsCleanListItems'>
-        {
-          giftsList.map(gift => <GiftItem itemData={gift} listedMode='true' key={giftsContext.id}/>)
-        }
-      </ul>
-      <div className="giftsCleanListButtons">
-        <button className="giftCleanListCloseBtn" onClick={closeCleanList}>Cerrar</button>
-        <button className="giftCleanListCloseBtn" onClick={generatePDF}>Exportar PDF</button>
+    <div className="cleanListBackdrop">
+      <div className='giftsCleanList'>
+        <h2 className='giftsCleanListTitle'>Comprar</h2>
+        <ul className='giftsCleanListItems'>
+          {
+            giftsList.map(gift => <GiftItem itemData={gift} listedMode='true' key={giftsContext.id}/>)
+          }
+        </ul>
+        <div className="giftsCleanListButtons">
+          <button className="giftCleanListCloseBtn" onClick={closeCleanList}>Cerrar</button>
+          <button className="giftCleanListExportBtn" onClick={generatePDF}>Exportar PDF</button>
+        </div>
       </div>
     </div>
   )

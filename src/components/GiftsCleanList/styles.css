@@ -1,14 +1,26 @@
+.cleanListBackdrop
+{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: none;
+    backdrop-filter: blur(10px);
+    background: #3939397c;
+}
+
 .giftsCleanList
 {
-    display: none;
     position: absolute;
     flex-direction: column;
     text-align: center;
     width: 30%;
-    background-color: aqua;
+    background-color: #f4f4f4;
     border-radius: 20px;
     padding: 1rem;
     box-sizing: border-box;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .giftsCleanListTitle
@@ -28,9 +40,10 @@
     justify-content: space-between;
 }
 
-.giftCleanListCloseBtn
+.giftCleanListCloseBtn,
+.giftCleanListExportBtn
 {
-    line-height: 2em;
+    line-height: 2.5em;
     font-size: 16px;
     border-radius: 5px;
     border: none;
@@ -39,7 +52,23 @@
     transition: 0.25s ease all;
 }
 
+.giftCleanListCloseBtn
+{
+    background: #bebebe;
+}
+
 .giftCleanListCloseBtn:hover
 {
-    transform: scale(1.1);
+    background: #999;
+}
+
+.giftCleanListExportBtn
+{
+    background: #be1614;
+    color: #f1f1f1;
+}
+
+.giftCleanListExportBtn:hover
+{
+    background-color: #840c0b;;
 }

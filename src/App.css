@@ -45,32 +45,46 @@ header
     min-width: 300px;
     height: fit-content;
     max-height: 75vh;
-    background-color: #acacac;
     border-radius: 10px;
     padding: 1rem 1.5rem;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    background-color: #f4f4f4;
 }
 
 .openFormBtn
 {
     width: 100%;
-    line-height: 2em;
+    line-height: 2.5em;
     font-size: 14px;
     border: none;
     border-radius: 5px;
+    background-color: #be1614;
+    color: #f1f1f1;
+}
+
+.openFormBtn:hover
+{
+    background-color: #840c0b;
 }
 
 .clearListBtn,
 .openCleanListBtn
 {
-    line-height: 2em;
+    line-height: 2.25em;
     font-size: 14px;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
+    background: #bebebe;
+}
+
+.clearListBtn:hover,
+.openCleanListBtn:hover
+{
+    background: #999;
 }
 
 .giftsTotalPrice
